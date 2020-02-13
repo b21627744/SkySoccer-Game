@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>SkySoccer</title>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				background-color: black;
+				background-image:url("./bg/ThickCloudsWaterBack.jpg");
+				margin:0;
+				padding:0;
+			}
+			#gameCanvas {
+				
+				width: 1440px;
+				height: 810px;
+				margin: auto;
+				align: center;
+                                text-align: center;
+			}
+			#scoreboard {
+				text-align: center;
+				font-family: Segoe UI, Helvetica, Ubuntu, sans-serif;
+				color: black;
+			}
+			#scores {
+				color: black;
+				font-size:80px; 
+				line-height:55px;
+				margin:20px auto; 
+				padding:0 0 5px 0;
+				width:150px;
+			}
+			
+			audio{
+				display:none;
+			}
+			.red{
+				color:#FF4045;
+			}
+                        .bordo{
+				color:#72060f;
+			}
+			.blue{
+				color:#1B32C0;
+			}
+                        .black{
+				color:#000000;
+			}
+		</style>
+                
+	</head>
+        
+	<body>
+                <div id='gameCanvas' width='1440' height='810' >
+                </div>
+		<script src='./scripts/three.js'></script>
+                <script src='./scripts/OrbitControls.js'></script>
+                <script src='./scripts/OBJLoader.js'></script>
+                <script src='./scripts/MTLLoader.js'></script>
+		<script src='./scripts/keyboard.js'></script>
+		<script src='./scripts/game.js'></script>
+               
+                <audio id="hit" src="./scripts/hit.mp3"></audio>
+                <audio id="Baslangic" src="./scripts/Baslangic.mp3"></audio>
+                <audio id="GOL" src="./scripts/GOL.mp3"></audio>
+                
+		<div id='scoreboard'>
+                    <br>Pick a Team For First Player
+                    <button id = "team0"><span class='red'>GS</span></button>
+                    <button id = "team1"><span class='blue'>FB</span></button>
+                    <button id = "team2"><span class='bordo'>TS</span></button>
+                    Pick a Team For Second Player
+                    <button id = "team3"><span class='red'>GS</span></button>
+                    <button id = "team4"><span class='blue'>FB</span></button>
+                    <button id = "team5"><span class='bordo'>TS</span></button>
+                    
+			<h1 id='scores'> <span class='black'>0</span>-<span class='black'>0</span> </h1>
+		</div>
+	</body>
+</html>
